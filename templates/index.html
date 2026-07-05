@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Customer Sentiment Analysis</title>
+
+</head>
+
+<body>
+
+    <h1>Customer Sentiment Analysis</h1>
+
+    <form action="/predict" method="POST">
+
+        <textarea
+            name="review"
+            rows="6"
+            cols="60"
+            placeholder="Enter your review here..."></textarea>
+
+        <br><br>
+
+        <button type="submit">
+
+            Analyze Sentiment
+
+        </button>
+
+    </form>
+
+    {% if prediction %}
+
+    <h2>Predicted Sentiment:</h2>
+
+    <h3>{{ prediction }}</h3>
+
+    {% endif %}
+
+</body>
+
+</html>
