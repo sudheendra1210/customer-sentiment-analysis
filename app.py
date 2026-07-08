@@ -41,8 +41,15 @@ def predict():
 
     prediction = model.predict(review_vector)[0]
 
+    # Get prediction probabilities
+    probabilities = model.predict_proba(review_vector)[0]
+
+    # Highest probability
+    confidence = round(max(probabilities) * 100, 2)
+
     return jsonify({
-        "prediction": prediction
+        "prediction": prediction,
+        "confidence": confidence
     })
 
 
@@ -77,17 +84,27 @@ def upload_csv():
     # Predict Every Review
     # ============================
 
-    predictions = []
+# Replace missing reviews with empty strings
+    clean_reviews = (
+    df["Review"]
+    .fillna("")
+    .astype(str)
+    .apply(preprocess_text)
+)
+    # ============================
+    # Vectorize ALL Reviews Together
+    # ============================
 
-    for review in df["Review"]:
+    vectors = vectorizer.transform(clean_reviews)
 
-        clean = preprocess_text(str(review))
+    # ============================
+    # Predict ALL Reviews Together
+    # ============================
 
-        vector = vectorizer.transform([clean])
+    predictions = model.predict(vectors)
 
-        prediction = model.predict(vector)[0]
-
-        predictions.append(prediction)
+    # Convert NumPy array to list
+    predictions = predictions.tolist()
 
     # Add new column
     df["Prediction"] = predictions
@@ -99,6 +116,13 @@ def upload_csv():
     positive = predictions.count("positive")
     neutral = predictions.count("neutral")
     negative = predictions.count("negative")
+    total = len(predictions)
+
+    positive_percent = round((positive / total) * 100, 1)
+    neutral_percent = round((neutral / total) * 100, 1)
+    negative_percent = round((negative / total) * 100, 1)
+    
+    
 
     # ============================
     # Save Result CSV
@@ -110,20 +134,22 @@ def upload_csv():
     )
 
     df.to_csv(output_path, index=False)
-
+    
     return jsonify({
 
-        "message": "CSV analyzed successfully!",
+    "message": "CSV analyzed successfully!",
 
-        "positive": positive,
+    "positive": positive,
+    "neutral": neutral,
+    "negative": negative,
 
-        "neutral": neutral,
+    "positive_percent": positive_percent,
+    "neutral_percent": neutral_percent,
+    "negative_percent": negative_percent,
 
-        "negative": negative,
+    "download": "/download"
 
-        "download": output_path
-
-    })
+})
 @app.route("/download")
 def download():
 

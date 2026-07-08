@@ -11,7 +11,16 @@ nltk.download("wordnet")
 stop_words = set(stopwords.words("english"))
 lemmatizer = WordNetLemmatizer()
 
+def preprocess_text(text):
 
+    if text is None:
+        text = ""
+
+    text = str(text)
+
+    text = text.lower()
+
+    ...
 def preprocess_text(text):
 
     # Convert to lowercase
