@@ -55,24 +55,17 @@
 
             <a href="/"
                class="d-flex align-items-center text-decoration-none">
+               
+                <div class="navbar-brand-text">
 
-                <div class="brand-icon">
+    <span class="logo-text">
 
-                    <i class="fa-solid fa-chart-line"></i>
+        SentiPulse
 
-                </div>
+    </span>
 
-                <div class="navbar-brand-text ms-2">
-
-                    <span class="brand-senti">
-                        Senti
-                    </span>
-
-                    <span class="brand-pulse">
-                        Pulse
-                    </span>
-
-                </div>
+</div>
+                
 
             </a>
 
@@ -85,189 +78,31 @@
 
                 </a>
 
-                <a href="#pipeline"
-                   class="nav-link-custom">
-
-                    How It Works
-
-                </a>
-
                 <a href="#upload"
                    class="nav-link-custom">
 
-                    CSV Upload
+                     Upload
 
                 </a>
 
                 <a href="#dashboard"
                    class="nav-link-custom">
 
-                    Dashboard
+                    Analytics
+                
 
                 </a>
 
             </div>
 
-            <div class="glass px-3 py-2 rounded-pill d-none d-md-flex align-items-center">
-
-                <span style="width:8px;
-                             height:8px;
-                             border-radius:50%;
-                             background:#22c55e;
-                             margin-right:10px;">
-
-                </span>
-
-                AI Ready
-
-            </div>
+            
 
         </div>
 
     </div>
 
 </nav>
-<!-- ======================================
-                HERO SECTION
-======================================= -->
 
-<section class="hero-section">
-
-    <div class="container">
-
-        <div class="text-center">
-
-            <div class="hero-badge">
-
-                <i class="fa-solid fa-sparkles me-2"></i>
-
-                AI Powered Sentiment Analysis
-
-            </div>
-
-            <h1 class="hero-title">
-
-                Understand What Your
-
-                <br>
-
-                <span class="gradient-text">
-
-                    Customers Really Feel
-
-                </span>
-
-            </h1>
-
-            <p class="hero-subtitle">
-
-                SentiPulse uses Machine Learning and Natural Language Processing
-                to classify customer reviews into Positive, Neutral, or Negative
-                sentiments in real time.
-
-            </p>
-
-            <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
-
-                <a href="#analyze" class="btn-analyze">
-
-                    <i class="fa-solid fa-play me-2"></i>
-
-                    Start Analyzing
-
-                </a>
-
-                <a href="#upload" class="btn-upload">
-
-                    <i class="fa-solid fa-cloud-arrow-up me-2"></i>
-
-                    Upload CSV
-
-                </a>
-
-            </div>
-
-        </div>
-
-        <!-- Hero Stats -->
-
-        <div class="hero-stats mt-5">
-
-            <div class="hero-stat">
-
-                <div class="hero-stat-num">
-
-                    99%
-
-                </div>
-
-                <div class="hero-stat-label">
-
-                    Accuracy
-
-                </div>
-
-            </div>
-
-            <div class="hero-divider"></div>
-
-            <div class="hero-stat">
-
-                <div class="hero-stat-num">
-
-                    &lt; 1 sec
-
-                </div>
-
-                <div class="hero-stat-label">
-
-                    Prediction
-
-                </div>
-
-            </div>
-
-            <div class="hero-divider"></div>
-
-            <div class="hero-stat">
-
-                <div class="hero-stat-num">
-
-                    3
-
-                </div>
-
-                <div class="hero-stat-label">
-
-                    Sentiments
-
-                </div>
-
-            </div>
-
-            <div class="hero-divider"></div>
-
-            <div class="hero-stat">
-
-                <div class="hero-stat-num">
-
-                    CSV
-
-                </div>
-
-                <div class="hero-stat-label">
-
-                    Batch Analysis
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
 <!-- ======================================
         REVIEW ANALYSIS
 ====================================== -->
@@ -278,26 +113,21 @@
 
         <div class="text-center mb-5">
 
-            <p class="section-label">
+        <div class="text-center mb-5">
 
-                <i class="fa-solid fa-wand-magic-sparkles me-2"></i>
+    <h1 class="analysis-hero-title">
 
-                AI Sentiment Analysis
+        Customer Sentiment Analysis
 
-            </p>
+    </h1>
 
-            <h2 class="section-title">
+    <p class="analysis-hero-subtitle">
 
-                Analyze Customer Reviews
+        Analyze customer reviews using Machine Learning and Natural Language Processing.
 
-            </h2>
+    </p>
 
-            <p class="section-sub">
-
-                Enter a customer review and let SentiPulse predict its sentiment instantly.
-
-            </p>
-
+</div>
         </div>
 
         <div class="row g-5 align-items-start">
@@ -312,7 +142,7 @@
 
                         <label class="form-label mb-3">
 
-                            Customer Review
+                             Review
 
                         </label>
 
@@ -348,7 +178,7 @@
 
                             <i class="fa-solid fa-magnifying-glass-chart me-2"></i>
 
-                            Analyze Sentiment
+                            Analyze Review
 
                         </button>
 
@@ -367,42 +197,45 @@
     class="glass prediction-card"
     style="display:none;">
 
-    <div class="prediction-header">
+<div class="prediction-content">
 
-        <div id="predictionIcon" class="prediction-icon">
-            <i class="fa-solid fa-brain"></i>
-        </div>
+    <span class="prediction-heading">
 
-        <div>
+        Prediction
 
-            <div class="prediction-label">
-                AI Prediction
-            </div>
+    </span>
 
-            <div class="prediction-value" id="predictionText">
-                Waiting...
-            </div>
+    <h2
+        id="predictionText"
+        class="prediction-value">
 
-            <div class="prediction-confidence" id="predictionConfidence">
-                Confidence: --
-            </div>
+        Waiting...
 
-        </div>
+    </h2>
 
-    </div>
+    <p
+        id="predictionConfidence"
+        class="prediction-confidence">
 
-    <hr>
+        Confidence: --
 
-    <div class="review-echo">
+    </p>
 
-        <div class="review-echo-label">
-            <i class="fa-solid fa-quote-left me-2"></i>
-            Review
-        </div>
+    <div class="prediction-divider"></div>
 
-        <div id="reviewEcho" class="review-echo-text"></div>
+    <span class="prediction-heading">
 
-    </div>
+        Analyzed Review
+
+    </span>
+
+    <p
+        id="reviewEcho"
+        class="review-echo-text">
+
+    </p>
+
+</div>
 
 </div>
 
@@ -421,14 +254,8 @@
 
         <div class="text-center mb-5">
 
-            <p class="section-label">
-
-                <i class="fa-solid fa-microchip me-2"></i>
-
-                AI Workflow
-
-            </p>
-
+        
+            
             <h2 class="section-title">
 
                 How SentiPulse Works
