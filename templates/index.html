@@ -88,7 +88,7 @@
                 <a href="#dashboard"
                    class="nav-link-custom">
 
-                    Analytics
+                    Dashboard
                 
 
                 </a>
@@ -102,81 +102,61 @@
     </div>
 
 </nav>
-
+    
 <!-- ======================================
         REVIEW ANALYSIS
 ====================================== -->
 
-<section class="analysis-section" id="analyze">
+
+<!-- ======================================
+        HOW SENTIPULSE WORKS
+====================================== -->
+<section class="analyze-section" id="analyze">
 
     <div class="container">
 
         <div class="text-center mb-5">
 
-        <div class="text-center mb-5">
+            <h1 class="section-title">
+                Customer Sentiment Analysis
+            </h1>
 
-    <h1 class="analysis-hero-title">
+            <p class="section-sub">
+                Analyze customer reviews using Machine Learning and NLP.
+            </p>
 
-        Customer Sentiment Analysis
-
-    </h1>
-
-    <p class="analysis-hero-subtitle">
-
-        Analyze customer reviews using Machine Learning and Natural Language Processing.
-
-    </p>
-
-</div>
         </div>
 
-        <div class="row g-5 align-items-start">
+        <div class="row g-4">
 
-            <!-- LEFT SIDE -->
+            <div class="col-lg-7">
 
-            <div class="col-lg-6">
+                <div class="workspace-card">
 
-                <div class="glass input-card">
+                    <label class="form-label">
+                        Review
+                    </label>
 
                     <form id="sentimentForm">
 
-                        <label class="form-label mb-3">
-
-                             Review
-
-                        </label>
-
                         <textarea
-
                             id="review"
-
                             class="review-textarea"
-
-                            rows="8"
-
+                            rows="10"
                             maxlength="2000"
-
-                            placeholder="Example: The product quality is amazing and delivery was super fast."
-
-                            required
-
-                        ></textarea>
+                            placeholder="Type or paste a customer review..."
+                            required></textarea>
 
                         <div class="char-counter">
 
-                            <span id="charCount">0</span> / 2000
+                            <span id="charCount">0</span>/2000
 
                         </div>
 
                         <button
-
                             id="analyzeBtn"
-
                             type="submit"
-
                             class="btn-analyze mt-4">
-
-                            <i class="fa-solid fa-magnifying-glass-chart me-2"></i>
 
                             Analyze Review
 
@@ -188,65 +168,44 @@
 
             </div>
 
-            <!-- RIGHT SIDE -->
-
-            <div class="col-lg-6">
+            <div class="col-lg-5">
 
                 <div
-    id="predictionSection"
-    class="glass prediction-card"
-    style="display:none;">
+                    id="predictionSection"
+                    class="workspace-card prediction-panel">
+                    
 
-<div class="prediction-content">
-
-    <span class="prediction-heading">
-
-        Prediction
-
-    </span>
-
-    <h2
-        id="predictionText"
-        class="prediction-value">
-
-        Waiting...
-
-    </h2>
-
-    <p
-        id="predictionConfidence"
-        class="prediction-confidence">
-
-        Confidence: --
-
-    </p>
-
-    <div class="prediction-divider"></div>
-
-    <span class="prediction-heading">
-
-        Analyzed Review
-
-    </span>
-
-    <p
-        id="reviewEcho"
-        class="review-echo-text">
-
-    </p>
-
+                    <div class="prediction-label">
+    Prediction
 </div>
 
-</div>
+<h2 id="predictionText" class="prediction-value">
+    Waiting...
+</h2>
+
+<p id="predictionConfidence">
+    Enter a review and click Analyze.
+</p>
+
+<hr>
+
+<h6 class="mb-3">
+    Review
+</h6>
+
+<p id="reviewEcho">
+    Your analyzed review will appear here.
+</p>
+
+                </div>
+
+            </div>
 
         </div>
 
     </div>
 
 </section>
-<!-- ======================================
-        HOW SENTIPULSE WORKS
-====================================== -->
 
 <section class="pipeline-section" id="pipeline">
 
@@ -264,8 +223,7 @@
 
             <p class="section-sub">
 
-                Every customer review passes through an intelligent Machine Learning pipeline before the final prediction.
-
+Customer reviews are cleaned, vectorized, and classified in real time.
             </p>
 
         </div>
@@ -276,13 +234,15 @@
 
             <div class="pipeline-step">
 
-                <div class="pipeline-icon">
+                <div class="pipeline-number">
 
-                    <i class="fa-solid fa-keyboard"></i>
+    01
 
-                </div>
+</div>
 
-                <h5>Input</h5>
+<h5>Input</h5>
+
+                
 
                 <p>
 
@@ -302,13 +262,15 @@
 
             <div class="pipeline-step">
 
-                <div class="pipeline-icon">
+                <div class="pipeline-number">
 
-                    <i class="fa-solid fa-broom"></i>
+    02
 
-                </div>
+</div>
 
-                <h5>Cleaning</h5>
+<h5>Cleaning</h5>
+
+                
 
                 <p>
 
@@ -328,13 +290,14 @@
 
             <div class="pipeline-step">
 
-                <div class="pipeline-icon">
+                <div class="pipeline-number">
 
-                    <i class="fa-solid fa-table-cells-large"></i>
+    03
 
-                </div>
+</div>
 
-                <h5>TF-IDF</h5>
+<h5>TF-IDF</h5>
+                
 
                 <p>
 
@@ -354,13 +317,15 @@
 
             <div class="pipeline-step">
 
-                <div class="pipeline-icon">
+                <div class="pipeline-number">
 
-                    <i class="fa-solid fa-brain"></i>
+    04
 
-                </div>
+</div>
 
-                <h5>ML Model</h5>
+<h5>ML Model</h5>
+
+                
 
                 <p>
 
@@ -380,13 +345,15 @@
 
             <div class="pipeline-step">
 
-                <div class="pipeline-icon">
+               <div class="pipeline-number">
 
-                    <i class="fa-solid fa-chart-pie"></i>
+    05
 
-                </div>
+</div>
 
-                <h5>Prediction</h5>
+<h5>Prediction</h5>
+
+                
 
                 <p>
 
@@ -427,8 +394,7 @@
 
             <p class="section-sub">
 
-                Upload a CSV file containing customer reviews and let SentiPulse analyze thousands of reviews in seconds.
-
+                Upload a CSV file containing a Review column.
             </p>
 
         </div>
@@ -437,7 +403,7 @@
 
             <div class="col-lg-8">
 
-                <div class="glass upload-card">
+                <div class="workspace-card input-card">
 
                     <div class="upload-icon-wrap">
 
@@ -525,41 +491,7 @@
 
                     <!-- Features -->
 
-                    <div class="row text-center mt-5 g-4">
-
-                        <div class="col-md-3">
-
-                            <i class="fa-solid fa-database fa-xl mb-3"></i>
-
-                            <p>Large CSV Support</p>
-
-                        </div>
-
-                        <div class="col-md-3">
-
-                            <i class="fa-solid fa-bolt fa-xl mb-3"></i>
-
-                            <p>Fast Prediction</p>
-
-                        </div>
-
-                        <div class="col-md-3">
-
-                            <i class="fa-solid fa-chart-simple fa-xl mb-3"></i>
-
-                            <p>Visual Dashboard</p>
-
-                        </div>
-
-                        <div class="col-md-3">
-
-                            <i class="fa-solid fa-download fa-xl mb-3"></i>
-
-                            <p>Download Results</p>
-
-                        </div>
-
-                    </div>
+                    
 
                 </div>
 
@@ -582,23 +514,15 @@
 
         <div class="text-center mb-5">
 
-            <p class="section-label">
-
-                <i class="fa-solid fa-chart-line me-2"></i>
-
-                Live Analytics
-
-            </p>
-
             <h2 class="section-title">
 
-                Analytics Dashboard
+    Upload CSV
 
-            </h2>
+</h2>
 
             <p class="section-sub">
 
-                Visualize sentiment distribution after analyzing your CSV.
+                Review insights generated from your uploaded dataset.
 
             </p>
 
@@ -614,13 +538,9 @@
 
                 <div class="glass dashboard-card positive-card">
 
-                    <div class="dashboard-icon">
+                    
 
-                        <i class="fa-solid fa-face-smile"></i>
-
-                    </div>
-
-                    <h5>Positive Reviews</h5>
+                    <h5>Positive </h5>
 
                     <h2 id="positiveCount">
 
@@ -641,13 +561,9 @@
 
                 <div class="glass dashboard-card neutral-card">
 
-                    <div class="dashboard-icon">
+                   
 
-                        <i class="fa-solid fa-face-meh"></i>
-
-                    </div>
-
-                    <h5>Neutral Reviews</h5>
+                    <h5>Neutral</h5>
 
                     <h2 id="neutralCount">
 
@@ -668,13 +584,9 @@
 
                 <div class="glass dashboard-card negative-card">
 
-                    <div class="dashboard-icon">
+                    
 
-                        <i class="fa-solid fa-face-frown"></i>
-
-                    </div>
-
-                    <h5>Negative Reviews</h5>
+                    <h5>Negative</h5>
 
                     <h2 id="negativeCount">
 
@@ -707,7 +619,7 @@
 
                             <i class="fa-solid fa-chart-pie me-2"></i>
 
-                            Sentiment Distribution
+                            Sentiment Comparison
 
                         </h4>
 
@@ -778,7 +690,7 @@
 
     <div class="container">
 
-        <div class="row g-5">
+        <div class="workspace row g-4 align-items-stretch">
 
             <!-- Brand -->
 
@@ -812,10 +724,8 @@
 
                 <p class="footer-text">
 
-                    SentiPulse is an AI-powered customer sentiment analysis
-                    platform built using Machine Learning, NLP and Flask.
-                    It helps businesses understand customer opinions
-                    through intelligent review analysis.
+                    AI-powered sentiment analysis built with
+Flask, Scikit-learn and Natural Language Processing.
 
                 </p>
 
@@ -827,7 +737,7 @@
 
                 <h5 class="footer-title">
 
-                    Quick Links
+                    Navigation
 
                 </h5>
 
@@ -883,7 +793,7 @@
 
                 <h5 class="footer-title">
 
-                    Technologies
+                    Built With
 
                 </h5>
 
@@ -897,14 +807,6 @@
 
                     <span class="tech-badge">TF-IDF</span>
 
-                    <span class="tech-badge">HTML</span>
-
-                    <span class="tech-badge">CSS</span>
-
-                    <span class="tech-badge">Bootstrap</span>
-
-                    <span class="tech-badge">JavaScript</span>
-
                 </div>
 
             </div>
@@ -917,7 +819,7 @@
 
             <p class="copyright">
 
-                © 2026 SentiPulse 
+                © 2026 SentiPulse
 
             </p>
 

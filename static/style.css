@@ -2,46 +2,46 @@
             GOOGLE FONTS
 ========================================== */
 
-:root{
+    :root{
 
-    /* Base */
+        /* Base */
 
-    --bg:#0E0E0E;
+        --bg:#0E0E0E;
 
-    --surface:#181818;
+        --surface:#181818;
 
-    --surface-light:#202020;
+        --surface-light:#202020;
 
-    --border:#2A2A2A;
+        --border:#2A2A2A;
 
-    /* Typography */
+        /* Typography */
 
-    --text:#F5F5F4;
+        --text:#F5F5F4;
 
-    --text-muted:#A1A1AA;
+        --text-muted:#A1A1AA;
 
-    /* Accent */
+        /* Accent */
 
-    --accent:#D6C3A5;
+        --accent:#D6C3A5;
 
-    /* Status */
+        /* Status */
 
-    --positive:#8DAA91;
+        --positive:#8DAA91;
 
-    --neutral:#BFAE8B;
+        --neutral:#BFAE8B;
 
-    --negative:#B98686;
+        --negative:#B98686;
 
-    /* Radius */
+        /* Radius */
 
-    --radius:22px;
+        --radius:22px;
 
-    /* Shadow */
+        /* Shadow */
 
-    --shadow:
-    0 10px 35px rgba(0,0,0,.22);
+        --shadow:
+        0 10px 35px rgba(0,0,0,.22);
 
-}
+    }
 
 /* ==========================================
                 RESET
@@ -135,23 +135,26 @@ section{
 
     font-family:"Space Grotesk",sans-serif;
 
-    font-size:clamp(2rem,4vw,3.4rem);
+    font-size:clamp(1.8rem,3vw,2.8rem);
 
     font-weight:700;
 
-    margin-bottom:18px;
+    margin-bottom:14px;
+
+    letter-spacing:-0.5px;
 
 }
-
 .section-sub{
 
     color:var(--text-muted);
 
-    max-width:760px;
+    max-width:620px;
 
     margin:auto;
 
-    font-size:1.05rem;
+    font-size:1rem;
+
+    line-height:1.7;
 
 }
 /* ==========================================
@@ -187,19 +190,23 @@ body{
 
     border-radius:14px;
 
-    background:#C7B299;
+    background:var(--accent);
 
     color:#111111;
 
     font-weight:600;
 
-    transition:.25s;
+    transition:.25s ease;
 
-}
+}   
 
 .btn-analyze:hover{
 
-    background:#D7C3A8;
+    background:#E2D1B7;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.18);
 
 }
 
@@ -237,21 +244,31 @@ body{
 
 .btn-analyze{
 
-    background:linear-gradient(
-    135deg,
-    var(--primary),
-    var(--secondary));
+    width:100%;
 
-    color:white;
+    height:54px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:var(--accent);
+
+    color:#111111;
+
+    font-weight:600;
+
+    transition:.25s ease;
 
 }
 
 .btn-analyze:hover{
 
-    transform:translateY(-3px);
+    background:#E2D1B7;
 
-   box-shadow:
-0 10px 35px rgba(0,0,0,.22);
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.18);
 
 }
 
@@ -377,12 +394,9 @@ body{
 
     height:2px;
 
-    background:linear-gradient(
-    90deg,
-    var(--primary),
-    var(--secondary));
+    background:var(--accent);
 
-    transition:.35s;
+    transition:.3s;
 
 }
 
@@ -396,134 +410,13 @@ body{
                 HERO
 ========================================== */
 
-.hero-section{
 
-    padding:90px 0 70px;
 
-    text-align:center;
-
-}
-
-.hero-badge{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:32px;
-
-    padding:10px 20px;
-
-    border-radius:999px;
-
-    background:rgba(108,99,255,.12);
-
-    border:1px solid rgba(108,99,255,.25);
-
-    color:var(--primary-light);
-
-    font-size:.88rem;
-
-    margin-bottom:18px;
-
-}
-
-.hero-title{
-
-    font-family:"Space Grotesk",sans-serif;
-
-    font-size:clamp(3rem,7vw,5.4rem);
-
-    font-weight:700;
-
-    line-height:1.8;
-
-    margin-bottom:18px;
-
-}
-
-.gradient-text{
-
-    background:linear-gradient(
-    135deg,
-    var(--primary),
-    var(--secondary));
-
-    -webkit-background-clip:text;
-
-    -webkit-text-fill-color:transparent;
-
-}
-
-.hero-subtitle{
-
-    max-width:760px;
-
-    margin:0 auto 45px;
-
-    color:var(--text-muted);
-
-    font-size:1.12rem;
-
-    line-height:1.8;
-
-}
 
 /* ==========================================
             HERO STATS
 ========================================== */
 
-.hero-stats{
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    gap:32px;
-
-    flex-wrap:wrap;
-
-    margin-top:70px;
-
-}
-
-.hero-stat{
-
-    text-align:center;
-
-}
-
-.hero-stat-num{
-
-    font-size:2rem;
-
-    font-weight:700;
-
-    color:white;
-
-}
-
-.hero-stat-label{
-
-    margin-top:6px;
-
-    color:var(--text-muted);
-
-    font-size:.9rem;
-
-}
-
-.hero-divider{
-
-    width:1px;
-
-    height:55px;
-
-    background:rgba(255,255,255,.08);
-
-}
 /* ==========================================
             ANALYSIS SECTION
 ========================================== */
@@ -592,9 +485,9 @@ body{
 
 .review-textarea:focus{
 
-    border-color:var(--primary);
+   border-color:var(--accent);
 
-    box-shadow:0 0 0 4px rgba(108,99,255,.15);
+box-shadow:0 0 0 4px rgba(214,195,165,.15);
 
 }
 
@@ -713,7 +606,7 @@ body{
 
 .pipeline-section{
 
-    padding:100px 0;
+    padding: 70px 0;
 
 }
 
@@ -727,9 +620,9 @@ body{
 
     flex-wrap:wrap;
 
-    gap:32px;
+    gap:24px;
 
-    margin-top:60px;
+    margin-top:40px;
 
 }
 
@@ -739,23 +632,21 @@ body{
 
 .pipeline-step{
 
-    width:190px;
+    width:170px;
 
-    min-height:220px;
+    min-height:185px;
 
-    padding:30px 22px;
+    padding:24px 18px;
 
     text-align:center;
 
-    background:rgba(255,255,255,.05);
+    background:#181818;
 
-    border:1px solid rgba(255,255,255,.08);
+    border:1px solid #2A2A2A;
 
-    backdrop-filter:blur(20px);
+    border-radius:20px;
 
-    border-radius:24px;
-
-    transition:.4s ease;
+    transition:.3s ease;
 
     cursor:pointer;
 
@@ -763,55 +654,17 @@ body{
 
 .pipeline-step:hover{
 
-    transform:translateY(-10px);
+    transform:translateY(-4px);
 
-    border-color:rgba(108,99,255,.4);
+    border-color:#3A3A3A;
 
-    box-shadow:0 20px 50px rgba(0,0,0,.35);
+    box-shadow:0 10px 24px rgba(0,0,0,.18);
 
 }
 
 /* ==========================================
             PIPELINE ICON
 ========================================== */
-
-.pipeline-icon{
-
-    width:72px;
-
-    height:72px;
-
-    margin:auto;
-
-    margin-bottom:18px;
-
-    border-radius:20px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    font-size:1.7rem;
-
-    background:linear-gradient(
-        135deg,
-        var(--primary),
-        var(--secondary)
-    );
-
-    color:white;
-
-    transition:.35s;
-
-}
-
-.pipeline-step:hover .pipeline-icon{
-
-    transform:scale(1.08) rotate(-8deg);
-
-}
 
 .pipeline-step h5{
 
@@ -841,13 +694,11 @@ body{
 
 .pipeline-arrow{
 
-    color:var(--primary-light);
+    color:#3A3A3A;
 
-    font-size:1.7rem;
+    opacity:.4;
 
-    opacity:.8;
-
-    animation:flowArrow 1.6s ease-in-out infinite;
+    font-size:1rem;
 
 }
 
@@ -902,13 +753,13 @@ body{
 
 .upload-icon-wrap{
 
-    width:100px;
+    width:80px;
 
-    height:100px;
+    height:80px;
 
     margin:auto;
 
-    margin-bottom:18px;
+    margin-bottom:20px;
 
     display:flex;
 
@@ -916,21 +767,17 @@ body{
 
     align-items:center;
 
-    border-radius:28px;
+    border-radius:20px;
 
-    background:linear-gradient(
-        135deg,
-        var(--primary),
-        var(--secondary)
-    );
+    background:#111111;
 
-    color:white;
+    border:1px solid #2A2A2A;
 
-    font-size:2.6rem;
+    color:#F5F5F5;
 
-    box-shadow:
-        0 20px 45px
-        rgba(108,99,255,.35);
+    font-size:2rem;
+
+    box-shadow:none;
 
 }
 
@@ -998,7 +845,7 @@ body{
 
     font-size:1.8rem;
 
-    color:var(--primary-light);
+    color:var(--accent);
 
     margin-bottom:18px;
 
@@ -1072,31 +919,6 @@ body{
     transform:translateY(-8px);
 
 }
-
-.dashboard-icon{
-
-    width:72px;
-
-    height:72px;
-
-    margin:auto;
-
-    margin-bottom:18px;
-
-    border-radius:20px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    font-size:1.8rem;
-
-    color:white;
-
-}
-
 .positive-card .dashboard-icon{
 
     background:linear-gradient(
@@ -1192,7 +1014,7 @@ body{
 
 .chart-header i{
 
-    color:var(--primary-light);
+    color:var(--accent);
 
 }
 
@@ -1247,11 +1069,11 @@ body{
 
 .footer-section{
 
-    padding:100px 0 40px;
+    padding:60px 0 28px;
 
-    border-top:1px solid rgba(255,255,255,.08);
+    border-top:1px solid #2A2A2A;
 
-    margin-top:120px;
+    margin-top:80px;
 
 }
 
@@ -1329,10 +1151,9 @@ body{
 
 .tech-badge:hover{
 
-    background:linear-gradient(
-        135deg,
-        var(--primary),
-        var(--secondary));
+    background:var(--accent);
+
+color:#111;
 
     transform:translateY(-3px);
 
@@ -1499,5 +1320,192 @@ body{
     line-height:1.8;
 
     font-size:.97rem;
+
+}
+/* ===========================
+      Pipeline Numbers
+=========================== */
+
+.pipeline-number{
+
+    width:48px;
+
+    height:48px;
+
+    margin:auto;
+
+    margin-bottom:18px;
+
+    border-radius:14px;
+
+    border:1px solid #2A2A2A;
+
+    background:#111111;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#F5F5F5;
+
+    font-weight:700;
+
+    font-size:.95rem;
+
+    letter-spacing:1px;
+
+}
+/* ===========================
+   ANALYZE WORKSPACE
+=========================== */
+
+.analyze-section{
+
+    padding:90px 0;
+
+}
+
+.workspace-card{
+
+    background:#181818;
+
+    border:1px solid #2A2A2A;
+
+    border-radius:24px;
+
+    padding:32px;
+
+    box-shadow:0 10px 35px rgba(0,0,0,.22);
+
+    height:100%;
+
+}
+
+.review-textarea{
+
+    width:100%;
+
+    min-height:280px;
+
+    resize:none;
+
+    background:#111111;
+
+    border:1px solid #2A2A2A;
+
+    border-radius:18px;
+
+    color:#F5F5F4;
+
+    padding:18px;
+
+    font-size:1rem;
+
+    transition:.3s;
+
+}
+
+.review-textarea:focus{
+
+    outline:none;
+
+    border-color:#4A4A4A;
+
+}
+
+.char-counter{
+
+    text-align:right;
+
+    margin-top:12px;
+
+    color:#A1A1AA;
+
+    font-size:.9rem;
+
+}
+
+.prediction-panel{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    min-height:470px;
+
+}
+
+.prediction-label{
+
+    color:#A1A1AA;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    font-size:.8rem;
+
+    margin-bottom:14px;
+
+}
+
+.prediction-value{
+
+    font-size:3rem;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+}
+
+#predictionConfidence{
+
+    color:#A1A1AA;
+
+    margin-bottom:24px;
+
+}
+
+#reviewEcho{
+
+    color:#D4D4D8;
+
+    line-height:1.8;
+
+    white-space:pre-wrap;
+
+}
+.prediction-panel{
+
+    min-height:470px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-start;
+
+}
+
+.prediction-value{
+
+    margin-top:10px;
+
+    margin-bottom:20px;
+
+    font-size:3rem;
+
+}
+
+.prediction-panel hr{
+
+    border-color:#2A2A2A;
+
+    margin:28px 0;
 
 }

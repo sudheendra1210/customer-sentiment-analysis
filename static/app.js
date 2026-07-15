@@ -33,6 +33,12 @@
     // Ctrl + Enter
     // ===============================
 
+    // ===============================
+// Analyze Section
+// ===============================
+
+if (form && textarea && button) {
+
     textarea.addEventListener("keydown", function (e) {
 
         if (e.key === "Enter" && e.ctrlKey) {
@@ -45,11 +51,8 @@
 
     });
 
-    // ===============================
-    // Submit Form
-    // ===============================
+    console.log("Submit event ready");
 
-    console.log("Submit event fired");
     form.addEventListener("submit", async function (e) {
 
         e.preventDefault();
@@ -113,27 +116,7 @@ if (downloadBtn) {
         prediction.charAt(0).toUpperCase() + prediction.slice(1);
         predictionConfidence.textContent =
     "Confidence: " + data.confidence + "%";
-        if(prediction==="positive"){
-
-    predictionConfidence.textContent =
-        "Confidence: 96%";
-
-}
-
-else if(prediction==="neutral"){
-
-    predictionConfidence.textContent =
-        "Confidence: 88%";
-
-}
-
-else{
-
-    predictionConfidence.textContent =
-        "Confidence: 94%";
-
-}
-
+       
     // Show analyzed review
     reviewEcho.textContent = textarea.value;
 
@@ -427,3 +410,4 @@ document.getElementById("negativePercent").textContent =
         pipelineObserver.observe(step);
 
     });
+}
